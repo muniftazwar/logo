@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code with Me</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .circle-text {
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .circle-text span {
+            font-size: 48px;
+        }
+
+        /* Additional decorative style */
+        .circle::before {
+            content: '';
+            width: 360px;
+            height: 360px;
+            border: 4px dashed #ff9800;
+            border-radius: 50%;
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            animation: rotate 8s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle">
+        <div class="circle-text">
+            Code <span>With</span> Me
+        </div>
